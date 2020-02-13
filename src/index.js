@@ -1,8 +1,9 @@
+
 exports.min = function min (array) {
     if (typeof array != "undefined" && array != null && array.length != null
         && array.length > 0) {
-        let z = array.sort( (a, b) => a - b );
-        return z[0];
+        let z = Math.min.apply(null, array);
+        return z;
     }
     return 0;
 
@@ -11,8 +12,8 @@ exports.min = function min (array) {
 exports.max = function max (array) {
     if (typeof array != "undefined" && array != null && array.length != null
         && array.length > 0) {
-        let z = array.sort( (a, b) => b - a);
-        return z[0];
+        let z = Math.max.apply(null, array);
+        return z;
     }
     return 0;
 }
